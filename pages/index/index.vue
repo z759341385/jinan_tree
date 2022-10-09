@@ -4,7 +4,7 @@
 
 			<swiper class="swiper" circular :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
 				previous-margin="30rpx" next-margin="30rpx" :duration="duration">
-				<swiper-item   class="banner-item" v-for="(item ,index) in bannerList" :key="index">
+				<swiper-item class="banner-item" v-for="(item ,index) in bannerList" :key="index">
 					<image class="banner-image-item" :src="item" mode="scaleToFill" @error="imageError"></image>
 				</swiper-item>
 			</swiper>
@@ -13,9 +13,33 @@
 			<button type="primary">捐步数1</button>
 		</view>
 		<view class="place-class">
+			<view class="header">
+				<text class="header-text">合作机构</text>
+				<text class="more-text">更多</text>
+			</view>
 			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
 				<view class="place-item-class" v-for="(item,index) in places " :key="index">
-					{{item.name}}
+					<view class="item-class">
+						<image class="img-item-class" :src="item.img" mode="scaleToFill" @error="imageError"></image>
+						<text class="place-name-class">{{item.name}}</text>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+
+
+		<view class="pet-class">
+			<view class="header">
+				<text class="header-text">精选宠物</text>
+				<text class="more-text">更多</text>
+			</view>
+			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
+				<view class="pet-item-class" v-for="(item,index) in pets " :key="index">
+					<view class="item-class">
+						<image class="img-item-class" :src="item.img" mode="scaleToFill" shape="circle"
+							@error="imageError"></image>
+						<text class="pet-name-class">{{item.name}}</text>
+					</view>
 				</view>
 			</scroll-view>
 		</view>
@@ -33,25 +57,52 @@
 					'http://d.zdqx.com/qtq_160428/005.jpg'
 				],
 				places: [{
-						name: '1'
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+						name: '北京xxxx救助所'
 					},
 					{
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+
 						name: '2'
 					}, {
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+
 						name: '3'
 					}, {
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+
 						name: '4'
 					},
 					{
-						name: '1'
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+
+						name: '5'
+					},
+
+				],
+				pets: [{
+						img: 'https://img2.baidu.com/it/u=670341883,3643142939&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
+						name: '蓝猫'
 					},
 					{
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+
 						name: '2'
 					}, {
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+
 						name: '3'
 					}, {
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+
 						name: '4'
 					},
+					{
+						img: 'https://img0.baidu.com/it/u=236085137,1979895699&fm=253&fmt=auto&app=138&f=JPEG?w=360&h=360',
+
+						name: '5'
+					},
+
 				],
 				indicatorDots: true,
 				autoplay: true,
@@ -85,27 +136,27 @@
 		.uni-margin-wrap {
 			height: 300rpx;
 			width: 100%;
+
 			.swiper {
 				height: 300rpx;
+
 				.banner-item {
 					display: block;
 					width: 100%;
 					text-align: center;
 					height: 300rpx;
 					width: cal(100% -60 rpx);
-					.banner-image-item{
+
+					.banner-image-item {
 						height: 300rpx;
 						width: 98%;
-					
+
 						border-radius: 30rpx;
 					}
 				}
 			}
 		}
 
-	
-
-		
 
 		.donate-view-class {
 			margin-top: 30rpx;
@@ -113,10 +164,26 @@
 		}
 
 		.place-class {
-			margin-top: 30rpx;
-
+			margin-top: 40rpx;
 			width: 100%;
-			height: 100px;
+
+			.header {
+				display: flex;
+				flex-direction: row;
+				padding-left: 30rpx;
+				padding-right: 30rpx;
+				justify-content: space-between;
+				margin-bottom: 30rpx;
+
+				.header-text {
+					font-size: 1.1rem;
+				}
+
+				.more-text {
+					font-size: 0.8rem;
+
+				}
+			}
 
 			.scroll-view_H {
 				white-space: nowrap;
@@ -125,12 +192,82 @@
 				.place-item-class {
 					display: inline-block;
 					text-align: center;
-					background-color: #00aa7f;
-					width: 100px;
-					height: 100px;
-					margin-left: 30px;
+					width: 230rpx;
+					margin-left: 30rpx;
+
+					.item-class {
+						display: flex;
+						flex-direction: column;
+
+						.img-item-class {
+							width: 230rpx;
+							height: 280rpx;
+
+						}
+
+						.place-name-class {
+							margin-top: 16rpx;
+							font-size: 0.7rem;
+
+						}
+					}
 				}
 			}
+
+
+		}
+
+		.pet-class {
+			margin-top: 30rpx;
+			width: 100%;
+
+			.header {
+				display: flex;
+				flex-direction: row;
+				padding-left: 30rpx;
+				padding-right: 30rpx;
+				justify-content: space-between;
+				margin-bottom: 30rpx;
+
+				.header-text {
+					font-size: 1.1rem;
+				}
+
+				.more-text {
+					font-size: 0.8rem;
+
+				}
+			}
+
+			.scroll-view_H {
+				white-space: nowrap;
+				width: 100%;
+
+				.pet-item-class {
+					display: inline-block;
+					text-align: center;
+					margin-left: 30rpx;
+
+					.item-class {
+						display: flex;
+						flex-direction: column;
+
+						.img-item-class {
+							width: 160rpx;
+							height: 160rpx;
+							border-radius: 100px;
+
+						}
+
+						.pet-name-class {
+							margin-top: 16rpx;
+							font-size: 0.7rem;
+						}
+					}
+				}
+			}
+
+
 		}
 
 	}
