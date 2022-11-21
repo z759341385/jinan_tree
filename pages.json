@@ -25,6 +25,15 @@
             
         }
    
+        ,{
+            "path" : "pages/homePage/homePage",
+            "style" : {
+                "navigationBarTitleText": "swiper-sticky",
+				"enablePullDownRefresh":true
+
+            }
+            
+        }
     ],
 	"tabBar": {
 	        "color": "#7A7E83", // tab 上的文字默认颜色
@@ -36,7 +45,14 @@
 	            "iconPath": "static/logo.png", // 图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px
 	            "selectedIconPath": "static/logo.png", // 选中时的图片路径
 	            "text": "首页" // tab 上按钮文字
-	        }, {
+	        }, 
+			{ // 最少2个、最多5个 tab
+			    "pagePath": "pages/homePage/homePage", // 页面路径，必须在 pages 中先定义
+			    "iconPath": "static/logo.png", // 图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px
+			    "selectedIconPath": "static/logo.png", // 选中时的图片路径
+			    "text": "test" // tab 上按钮文字
+			}, 
+		{
 	            "pagePath": "pages/message/message",
 	            "iconPath": "static/logo.png",
 	            "selectedIconPath": "static/logo.png",

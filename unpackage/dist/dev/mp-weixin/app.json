@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/homePage/homePage"
   ],
   "subPackages": [],
   "window": {
@@ -24,6 +25,12 @@
         "text": "首页"
       },
       {
+        "pagePath": "pages/homePage/homePage",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": "test"
+      },
+      {
         "pagePath": "pages/message/message",
         "iconPath": "static/logo.png",
         "selectedIconPath": "static/logo.png",
@@ -36,6 +43,11 @@
         "text": "我的"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": ""
+    }
   },
   "usingComponents": {}
 }

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		<div>123</div>
 	</view>
 </template>
 

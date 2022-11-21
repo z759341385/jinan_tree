@@ -10,11 +10,11 @@
 			</swiper>
 		</view>
 		<view class="donate-view-class">
-			<button type="primary">123</button>
+			<button type="primary" @click="scanCode">扫一扫</button>
 		</view>
 		<view class="place-class">
 			<view class="header">
-				<text class="header-text">12</text>
+				<text class="header-text">122</text>
 				<text class="more-text">更多</text>
 			</view>
 			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
@@ -122,6 +122,46 @@
 				console.log(e)
 				this.old.scrollTop = e.detail.scrollTop
 			},
+			scanCode() {
+							// 允许从相机和相册扫码
+							uni.scanCode({
+								scanType: ['qrCode'], //条形码
+								success: function(res) {
+									console.log(111, res)
+			
+									// 微信小程序
+									if (res.errMsg == "scanCode:ok") {
+										// 扫描到的信息
+			
+										let {
+											type,
+											code,
+											id
+										} = JSON.parse(res.result)
+			
+										// 卖家 取货
+										if (type == 'qh') {
+											// 跳转到商品详情界面
+											uni.navigateTo({
+												url: `/reusePage/orderDetails/orderDetails?id=${id}&ordertype=1`
+											});
+										}
+										// uni.showToast({
+										// 	title: res.result,
+										// 	duration: 2000
+										// });
+			
+									} else {
+			
+										console.log("未识别到二维码，请重新尝试！")
+			
+										uni.$u.toast('未识别到二维码，请重新尝试！')
+									}
+			
+								}
+							});
+						}
+
 		}
 	}
 </script>
