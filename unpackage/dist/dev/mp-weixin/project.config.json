@@ -6,18 +6,35 @@
     },
     "setting": {
         "urlCheck": false,
-        "ignoreUploadUnusedFiles": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
-        }
+        },
+        "ignoreUploadUnusedFiles": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.26.1",
+    "libVersion": "2.26.2",
     "appid": "touristappid",
-    "projectname": "pet",
-    "condition": {},
+    "projectname": "jinan_tree",
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "current": -1,
+            "list": []
+        },
+        "miniprogram": {
+            "current": -1,
+            "list": []
+        }
+    },
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4

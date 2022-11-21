@@ -10,11 +10,11 @@
 			</swiper>
 		</view>
 		<view class="donate-view-class">
-			<button type="primary">捐步数1</button>
+			<button type="primary">123</button>
 		</view>
 		<view class="place-class">
 			<view class="header">
-				<text class="header-text">合作机构</text>
+				<text class="header-text">12</text>
 				<text class="more-text">更多</text>
 			</view>
 			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
@@ -30,7 +30,7 @@
 
 		<view class="pet-class">
 			<view class="header">
-				<text class="header-text">精选宠物</text>
+				<text class="header-text">2</text>
 				<text class="more-text">更多</text>
 			</view>
 			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">

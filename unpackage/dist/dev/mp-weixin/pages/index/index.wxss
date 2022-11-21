@@ -54,9 +54,22 @@
   width: 80%;
 }
 .content .place-class {
-  margin-top: 30rpx;
+  margin-top: 40rpx;
   width: 100%;
-  height: 100px;
+}
+.content .place-class .header {
+  display: flex;
+  flex-direction: row;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.content .place-class .header .header-text {
+  font-size: 1.1rem;
+}
+.content .place-class .header .more-text {
+  font-size: 0.8rem;
 }
 .content .place-class .scroll-view_H {
   white-space: nowrap;
@@ -65,9 +78,59 @@
 .content .place-class .scroll-view_H .place-item-class {
   display: inline-block;
   text-align: center;
-  background-color: #00aa7f;
-  width: 100px;
-  height: 100px;
-  margin-left: 30px;
+  width: 230rpx;
+  margin-left: 30rpx;
+}
+.content .place-class .scroll-view_H .place-item-class .item-class {
+  display: flex;
+  flex-direction: column;
+}
+.content .place-class .scroll-view_H .place-item-class .item-class .img-item-class {
+  width: 230rpx;
+  height: 280rpx;
+}
+.content .place-class .scroll-view_H .place-item-class .item-class .place-name-class {
+  margin-top: 16rpx;
+  font-size: 0.7rem;
+}
+.content .pet-class {
+  margin-top: 30rpx;
+  width: 100%;
+}
+.content .pet-class .header {
+  display: flex;
+  flex-direction: row;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.content .pet-class .header .header-text {
+  font-size: 1.1rem;
+}
+.content .pet-class .header .more-text {
+  font-size: 0.8rem;
+}
+.content .pet-class .scroll-view_H {
+  white-space: nowrap;
+  width: 100%;
+}
+.content .pet-class .scroll-view_H .pet-item-class {
+  display: inline-block;
+  text-align: center;
+  margin-left: 30rpx;
+}
+.content .pet-class .scroll-view_H .pet-item-class .item-class {
+  display: flex;
+  flex-direction: column;
+}
+.content .pet-class .scroll-view_H .pet-item-class .item-class .img-item-class {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 100px;
+}
+.content .pet-class .scroll-view_H .pet-item-class .item-class .pet-name-class {
+  margin-top: 16rpx;
+  font-size: 0.7rem;
 }
 
