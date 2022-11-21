@@ -43,6 +43,50 @@
 				</view>
 			</scroll-view>
 		</view>
+		<view class="pet-class">
+			<view class="header">
+				<text class="header-text">2</text>
+				<text class="more-text">更多</text>
+			</view>
+			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
+				<view class="pet-item-class" v-for="(item,index) in pets " :key="index">
+					<view class="item-class">
+						<image class="img-item-class" :src="item.img" mode="scaleToFill" shape="circle"
+							@error="imageError"></image>
+						<text class="pet-name-class">{{item.name}}</text>
+					</view>
+				</view>
+			</scroll-view>
+		</view><view class="pet-class">
+			<view class="header">
+				<text class="header-text">2</text>
+				<text class="more-text">更多</text>
+			</view>
+			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
+				<view class="pet-item-class" v-for="(item,index) in pets " :key="index">
+					<view class="item-class">
+						<image class="img-item-class" :src="item.img" mode="scaleToFill" shape="circle"
+							@error="imageError"></image>
+						<text class="pet-name-class">{{item.name}}</text>
+					</view>
+				</view>
+			</scroll-view>
+		</view><view class="pet-class">
+			<view class="header">
+				<text class="header-text">2</text>
+				<text class="more-text">更多</text>
+			</view>
+			<scroll-view class="scroll-view_H" scroll-x="true" @scroll="scroll" scroll-left="120">
+				<view class="pet-item-class" v-for="(item,index) in pets " :key="index">
+					<view class="item-class">
+						<image class="img-item-class" :src="item.img" mode="scaleToFill" shape="circle"
+							@error="imageError"></image>
+						<text class="pet-name-class">{{item.name}}</text>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+<my-tabbar :current-page="0"></my-tabbar>
 
 	</view>
 </template>
@@ -172,7 +216,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
+		padding-bottom: calc(150rpx + env(safe-area-inset-bottom));
 		.uni-margin-wrap {
 			height: 300rpx;
 			width: 100%;

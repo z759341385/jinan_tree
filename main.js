@@ -2,7 +2,10 @@ import App from './App'
 
 // #ifndef VUE3
 import Vue from 'vue'
+import myTabbar from "./components/my-tabbar.vue"
+
 Vue.config.productionTip = false
+Vue.component('my-tabbar', myTabbar)
 App.mpType = 'app'
 const app = new Vue({
     ...App

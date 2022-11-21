@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "swiper-sticky",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "swiper-page": "/pages/homePage/swiper-sticky-page"
-  }
-}

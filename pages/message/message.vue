@@ -7,6 +7,8 @@
 			<view class="message-item-class" v-for="(item,index) in messages">{{item.userName}}</view>
 
 		</scroll-view>
+		<my-tabbar :current-page="3"></my-tabbar>
+		
 	</view>
 </template>
 
